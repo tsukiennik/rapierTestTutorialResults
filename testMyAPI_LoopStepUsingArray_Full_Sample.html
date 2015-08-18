@@ -1,0 +1,831 @@
+<h1>Test Summary</h1>
+<style>
+	body {
+		font: small arial,sans-serif;
+		font-size: 13px;
+	}
+	.cellWorkBreak {
+		word-break: initial;
+		word-wrap: break-word;
+	}
+	.expandIcon {
+		font-size: 150%;
+		position:relative; top: 2px;
+		margin-right: 6px;
+		color: #999999;
+	}
+	.parallelStepMargin {
+		margin-left:17px;
+	}
+	h1 {
+		text-decorationx: underline;
+	}
+	a {
+		color: #000044;
+	}
+	table {
+		border-radius: 5px;
+		font-size:105%;
+	}
+	table.sub {
+		border-width: 0px;
+	}
+	td.sub {
+		border-width: 0px;
+	}
+	th.sub {
+		border-width: 0px;
+	}
+	th.script {
+		font-size: 130%;
+		position:relative;
+		top: -2px;
+	}
+	th.step {
+		font-size: 105%;
+	}
+	th span {
+		font-size: 13px;
+	}
+	th.parallelStep {
+		font-size: 80%;
+	}
+	.pushRight {
+		text-align:right;
+	}
+	td {
+		border-radius: 5px;
+		padding:2px 4px 2px 4px;
+		margin:0px;
+		border-width:1px;
+	}
+	th {
+		border-radius: 5px;
+		padding:2px 4px 2px 4px;
+		margin:0px;
+		border-width:1px;
+	}
+	td.cellValue {
+		padding:2px 4px 2px 14px;
+	}
+	tr {
+		margin:0px;
+		border-width:0px;
+	}
+	pre {
+		border: 1px solid #cccccc;
+		border-radius: 5px;
+		background-color: #eeeeee;
+		font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+		font-size:90%;
+		padding:2px 4px 2px 4px;
+	}
+	a pre {
+		color:black;
+		text-decoration:none !important;
+	}
+</style>
+<script>
+	function expand_contract(e) {
+		if (e.srcElement.getAttribute("expanded") == "true") {
+			e.srcElement.setAttribute("expanded", "false");
+			e.srcElement.innerText = "+";
+			document.getElementById(e.srcElement.getAttribute("target")).style.display = "none";			
+		}
+		else {
+			e.srcElement.setAttribute("expanded", "true");
+			e.srcElement.innerText = "-";
+			document.getElementById(e.srcElement.getAttribute("target")).style.display = "block";	
+			document.getElementById(e.srcElement.getAttribute("target")).scrollIntoView();
+		}
+	}
+	function expand_contract2(e) {
+		var target = document.getElementById(e.srcElement.getAttribute("target"));
+		if (e.srcElement.getAttribute("expanded") == "true") {
+			e.srcElement.setAttribute("expanded", "false");
+			e.srcElement.innerText = "+";
+			e.srcElement.setAttribute("contents", target.innerHTML);
+			target.innerHTML = "";
+		}
+		else {
+			e.srcElement.setAttribute("expanded", "true");
+			e.srcElement.innerText = "-";
+			target.innerHTML = e.srcElement.getAttribute("contents");
+		}
+	}
+</script>
+<table border=0>
+	<tr>
+		<td><b>Environment</b></td>
+		<td class="cellValue"></td>
+	</tr>
+	<tr>
+		<td><b>Date / Time</b></td>
+		<td class="cellValue"></td>
+	</tr>
+	<tr>
+		<td><b>Total Execution Time</b></td>
+		<td class="cellValue"></td>
+	</tr>
+	<tr>
+		<td><b>Test Suite Name</b></td>
+		<td class="cellValue"></td>
+	</tr>
+	<tr>
+		<td><b>Test Suite Description</b></td>
+		<td class="cellValue"></td>
+	</tr>
+	<tr>
+		<td><b>Number of scenarios tested</b></td>
+		<td class="cellValue"><b>1</b></td>
+	</tr>
+	<tr>
+		<td><b>Pass</b></td>
+		<td class="cellValue" style="color: #00BB00;"><b>1</b></td>
+	</tr>
+	<tr>
+		<td><b>Fail</b></td>
+		<td class="cellValue" style="color: #BB0000"><b>0</b></td>
+	</tr>
+</table>
+<br/><br/><br/>
+
+<h1>Test Results</h1>
+
+<table style="table-layout: fixed; width: 100%; background-color:#cccccc;" border=1>
+	<tr>
+		<th width="5%"  class="cellWorkBreak">#</th>
+		<th width="15%"  class="cellWorkBreak">Name</th>
+		<th width="25%"  class="cellWorkBreak">Title</th>
+		<th width="35%"  class="cellWorkBreak">Description</th>
+		<th width="10%"  class="cellWorkBreak">See Details</th>
+		<th width="10%"  class="cellWorkBreak">Pass / Fail</th>
+	</tr>
+</table>
+
+<table style="table-layout: fixed; width: 100%" border=1>
+
+
+	<tr><a name="BackToDetails1"></a>
+		<th class="script cellWorkBreak cellWorkBreak" width="5%"><span onclick="expand_contract2(event)" class="expandIcon" expanded="true" target="Scenario1_steps">-</span>1</th>
+		<td width="15%"  class="cellWorkBreak">testMyAPI_LoopStepUsingArray</td>
+		<td width="25%"  class="cellWorkBreak">Loop a Step Using an Array of Values</td>
+		<td width="35%"  class="cellWorkBreak">LOOP a STEP for each Array Value using PARAMETERS derived from that Array Value...</td>
+		<th width="10%"  class="cellWorkBreak"><a href="#Scenario1">Scenario</a></th>
+		<th width="10%"  class="cellWorkBreak">
+			<span style="color: #00BB00;">PASS</span>
+			
+			
+		</th>
+	</tr>
+	<tr id="Scenario1_steps">
+		<td colspan=6  class="sub">
+			<table class="sub" style="table-layout: fixed; width: 100%" border=1>
+				
+				
+				
+					<tr id="Scenario1_steps">
+						<th class="step sub cellWorkBreak pushRight" width="5%" >1</th>
+						<td width="20%"  class="cellWorkBreak">findPetsByStatusSold</td>
+						<td width="30%"  class="cellWorkBreak">Finds Pets by status Sold</td>
+						<td width="25%"  class="cellWorkBreak">Response Code: <b>200</b></td>
+						<th width="10%"  class="cellWorkBreak"><a href="#Scenario1_1">Step</a></th>
+						<th width="10%"  class="cellWorkBreak">
+							<span style="color: #00BB00;">PASS</span>
+							
+							
+						</th>
+					</tr>
+					
+				
+				
+				
+					<tr id="Scenario1_steps">
+						<th class="step sub cellWorkBreak pushRight" width="5%" >2</th>
+						<td width="20%"  class="cellWorkBreak">wishGoodLuckToPets</td>
+						<td width="30%"  class="cellWorkBreak">All of our Sold Pets deserve best wishes...</td>
+						<td width="25%"  class="cellWorkBreak">Response Code: <b></b></td>
+						<th width="10%"  class="cellWorkBreak"><a href="#Scenario1_2">Step</a></th>
+						<th width="10%"  class="cellWorkBreak">
+							<span style="color: #00BB00;">PASS</span>
+							
+							
+						</th>
+					</tr>
+					<tr>
+							<td colspan=6  class="sub">
+								<table class="sub" style="table-layout: fixed; width: 100%" border=1>
+									
+									
+									
+										<tr>
+											<th width="1%" style="border-width:0px;" class="pushRight cellWorkBreak"></th>
+											<th class="sub parallelStep" width="5%" class="pushRight cellWorkBreak">1</th>
+											<td width="20%"  class="cellWorkBreak">GoodLuck_1</td>
+											<td width="29%"  class="cellWorkBreak">We&#39;ll miss you &#39;Dog 2&#39;...</td>
+											<td width="25%"  class="cellWorkBreak">Response Code: <b>200</b></td>
+											<th width="10%"  class="cellWorkBreak"></th>
+											<th width="10%"  class="cellWorkBreak">
+												<span style="color: #00BB00;">PASS</span>
+												
+												
+											</th>
+										</tr>
+									
+									
+									
+										<tr>
+											<th width="1%" style="border-width:0px;" class="pushRight cellWorkBreak"></th>
+											<th class="sub parallelStep" width="5%" class="pushRight cellWorkBreak">2</th>
+											<td width="20%"  class="cellWorkBreak">GoodLuck_2</td>
+											<td width="29%"  class="cellWorkBreak">We&#39;ll miss you &#39;hello kity&#39;...</td>
+											<td width="25%"  class="cellWorkBreak">Response Code: <b>200</b></td>
+											<th width="10%"  class="cellWorkBreak"></th>
+											<th width="10%"  class="cellWorkBreak">
+												<span style="color: #00BB00;">PASS</span>
+												
+												
+											</th>
+										</tr>
+									
+									
+									
+										<tr>
+											<th width="1%" style="border-width:0px;" class="pushRight cellWorkBreak"></th>
+											<th class="sub parallelStep" width="5%" class="pushRight cellWorkBreak">3</th>
+											<td width="20%"  class="cellWorkBreak">GoodLuck_3</td>
+											<td width="29%"  class="cellWorkBreak">We&#39;ll miss you &#39;hello kity&#39;...</td>
+											<td width="25%"  class="cellWorkBreak">Response Code: <b>200</b></td>
+											<th width="10%"  class="cellWorkBreak"></th>
+											<th width="10%"  class="cellWorkBreak">
+												<span style="color: #00BB00;">PASS</span>
+												
+												
+											</th>
+										</tr>
+									
+									
+									
+										<tr>
+											<th width="1%" style="border-width:0px;" class="pushRight cellWorkBreak"></th>
+											<th class="sub parallelStep" width="5%" class="pushRight cellWorkBreak">4</th>
+											<td width="20%"  class="cellWorkBreak">GoodLuck_4</td>
+											<td width="29%"  class="cellWorkBreak">We&#39;ll miss you &#39;hello kity&#39;...</td>
+											<td width="25%"  class="cellWorkBreak">Response Code: <b>200</b></td>
+											<th width="10%"  class="cellWorkBreak"></th>
+											<th width="10%"  class="cellWorkBreak">
+												<span style="color: #00BB00;">PASS</span>
+												
+												
+											</th>
+										</tr>
+									
+									
+									
+										<tr>
+											<th width="1%" style="border-width:0px;" class="pushRight cellWorkBreak"></th>
+											<th class="sub parallelStep" width="5%" class="pushRight cellWorkBreak">5</th>
+											<td width="20%"  class="cellWorkBreak">GoodLuck_5</td>
+											<td width="29%"  class="cellWorkBreak">We&#39;ll miss you &#39;hello kity with updated&#39;...</td>
+											<td width="25%"  class="cellWorkBreak">Response Code: <b>200</b></td>
+											<th width="10%"  class="cellWorkBreak"></th>
+											<th width="10%"  class="cellWorkBreak">
+												<span style="color: #00BB00;">PASS</span>
+												
+												
+											</th>
+										</tr>
+									
+									
+									
+										<tr>
+											<th width="1%" style="border-width:0px;" class="pushRight cellWorkBreak"></th>
+											<th class="sub parallelStep" width="5%" class="pushRight cellWorkBreak">6</th>
+											<td width="20%"  class="cellWorkBreak">GoodLuck_6</td>
+											<td width="29%"  class="cellWorkBreak">We&#39;ll miss you &#39;pretty kitty&#39;...</td>
+											<td width="25%"  class="cellWorkBreak">Response Code: <b>200</b></td>
+											<th width="10%"  class="cellWorkBreak"></th>
+											<th width="10%"  class="cellWorkBreak">
+												<span style="color: #00BB00;">PASS</span>
+												
+												
+											</th>
+										</tr>
+									
+									
+									
+										<tr>
+											<th width="1%" style="border-width:0px;" class="pushRight cellWorkBreak"></th>
+											<th class="sub parallelStep" width="5%" class="pushRight cellWorkBreak">7</th>
+											<td width="20%"  class="cellWorkBreak">GoodLuck_7</td>
+											<td width="29%"  class="cellWorkBreak">We&#39;ll miss you &#39;pretty kitty&#39;...</td>
+											<td width="25%"  class="cellWorkBreak">Response Code: <b>200</b></td>
+											<th width="10%"  class="cellWorkBreak"></th>
+											<th width="10%"  class="cellWorkBreak">
+												<span style="color: #00BB00;">PASS</span>
+												
+												
+											</th>
+										</tr>
+									</table><br/>
+							</td>
+						</tr>
+					
+				</table><br/><br/>
+		</td>
+	</tr></table>
+
+<br/><br/><br/><br/><br/><br/>
+
+
+
+<h1><span onclick="expand_contract(event)" class="expandIcon" expanded="true" target="Scenario1_body">-</span><a name="Scenario1"></a><a href="#BackToDetails1" class="backLink" title="Back to Summary for Scenario #1">Scenario #1</a> - Loop a Step Using an Array of Values </h1>
+
+
+<div id="Scenario1_body">
+
+	
+	
+	
+
+	<h2><span onclick="expand_contract(event)" class="expandIcon" expanded="true" target="Scenario1_1_body">-</span><a name="Scenario1_1"></a>1.1 findPetsByStatusSold calling API Method: findPetsByStatus</h2>
+	
+
+	
+
+	<div id="Scenario1_1_body">
+		<p class="parallelStepMargin">Finds Pets by status Sold</p>
+		
+
+		<h3><span onclick="expand_contract(event)" class="expandIcon" expanded="false" target="Scenario1_1_1">+</span>1.1.1 Request for: findPetsByStatusSold</h3>
+
+			<pre style="word-break:break-all; display:none;" onclick="document.location = '#Scenario1_1_1'" id="Scenario1_1_1">
+
+{
+    "method": "GET",
+    "uri": "http://petstore.swagger.io/v2/pet/findByStatus",
+    "qs": {
+        "status": "sold"
+    },
+    "headers": {
+        "Authorization": "Bearer undefined"
+    },
+    "requestMetrics": {
+        "setupTime": "0.007 seconds to setup",
+        "responseTime": "0.098 seconds to respond"
+    }
+}
+
+			</pre>
+
+			<h3><span onclick="expand_contract(event)" class="expandIcon" expanded="false" target="Scenario1_1_2">+</span>1.1.2 Response for: findPetsByStatusSold</h3>
+
+			<div class="parallelStepMargin">
+				Response Code: <b>200</b>
+				<br/>
+				Pass / Fail: <b>
+					<span style="color: #00BB00;">PASS</span>
+					
+					
+				</b>
+			</div>
+
+			<pre style="word-break:break-all; display:none;" onclick="document.location = '#Scenario1_1_2'" id="Scenario1_1_2">
+
+[{
+    "id": 5,
+    "category": {
+        "id": 1,
+        "name": "Dogs"
+    },
+    "name": "Dog 2",
+    "photoUrls": ["url1", "url2"],
+    "tags": [{
+        "id": 1,
+        "name": "tag2"
+    }, {
+        "id": 2,
+        "name": "tag3"
+    }],
+    "status": "sold"
+}, {
+    "id": 1439531460,
+    "category": {
+        "id": 1439531460,
+        "name": "dog"
+    },
+    "name": "hello kity",
+    "photoUrls": ["http://foo.bar.com/1", "http://foo.bar.com/2"],
+    "tags": [{
+        "id": 1439531460,
+        "name": "blank"
+    }],
+    "status": "sold"
+}, {
+    "id": 1439531464,
+    "category": {
+        "id": 1439531464,
+        "name": "dog"
+    },
+    "name": "hello kity",
+    "photoUrls": ["http://foo.bar.com/1", "http://foo.bar.com/2"],
+    "tags": [{
+        "id": 1439531464,
+        "name": "blank"
+    }],
+    "status": "sold"
+}, {
+    "id": 1439531465,
+    "category": {
+        "id": 1439531465,
+        "name": "dog"
+    },
+    "name": "hello kity",
+    "photoUrls": ["http://foo.bar.com/1", "http://foo.bar.com/2"],
+    "tags": [{
+        "id": 1439531465,
+        "name": "blank"
+    }],
+    "status": "sold"
+}, {
+    "id": 1439531466,
+    "category": {
+        "id": 1439531466,
+        "name": "dog"
+    },
+    "name": "hello kity with updated",
+    "photoUrls": ["http://foo.bar.com/1", "http://foo.bar.com/2"],
+    "tags": [{
+        "id": 1439531466,
+        "name": "blank"
+    }],
+    "status": "sold"
+}, {
+    "id": 987876765,
+    "name": "pretty kitty",
+    "photoUrls": ["http://www.mrwallpaper.com/wallpapers/Light-brown-Cat-1600x1200.jpg"],
+    "tags": [],
+    "status": "sold"
+}, {
+    "id": 99887,
+    "name": "pretty kitty",
+    "photoUrls": ["http://www.mrwallpaper.com/wallpapers/Light-brown-Cat-1600x1200.jpg"],
+    "tags": [],
+    "status": "sold"
+}]
+
+			</pre>
+
+			
+			<br/><br/>
+		
+
+		
+	</div>
+		
+	
+	
+
+	
+
+	<h2><span onclick="expand_contract(event)" class="expandIcon" expanded="true" target="Scenario1_2_body">-</span><a name="Scenario1_2"></a>1.2 wishGoodLuckToPets</h2>
+	
+
+	<div id="Scenario1_2_body">
+		<p class="parallelStepMargin">All of our Sold Pets deserve best wishes...</p>
+		
+
+		
+
+		
+			
+			
+				<h3 class="parallelStepMargin">1.2.1 GoodLuck_1 calling API Method: generalUtils.nop</h3>
+				
+
+				
+
+				<p class="parallelStepMargin">We&#39;ll miss you &#39;Dog 2&#39;...</p>
+				
+
+				<h4><span onclick="expand_contract(event)" class="expandIcon" expanded="false" target="Scenario1_2_1_1">+</span>1.2.1.1 Request for: GoodLuck_1</h4>
+
+				<pre style="word-break:break-all; display:none;" onclick="document.location = '#Scenario1_2_1_1'" id="Scenario1_2_1_1">
+
+{
+    "message": "Good Luck in your new home!!! We'll miss you 'Dog 2'...",
+    "requestMetrics": {
+        "setupTime": "0.002 seconds to setup",
+        "responseTime": "0.006 seconds to respond"
+    }
+}
+
+				</pre>
+
+				<h4><span onclick="expand_contract(event)" class="expandIcon" expanded="false" target="Scenario1_2_1_2">+</span>1.2.1.2 Response for: GoodLuck_1</h4>
+
+				<div class="parallelStepMargin">
+					Response Code: <b>200</b>
+					<br/>
+					Pass / Fail: <b>
+						<span style="color: #00BB00;">PASS</span>
+						
+						
+					</b>
+				</div>
+
+				<pre style="word-break:break-all; display:none;" onclick="document.location = '#Scenario1_2_1_2'" id="Scenario1_2_1_2">
+
+{
+    "message": "Good Luck in your new home!!! We'll miss you 'Dog 2'..."
+}
+
+				</pre>
+
+				
+				<br/><br/>
+			
+			
+			
+				<h3 class="parallelStepMargin">1.2.2 GoodLuck_2 calling API Method: generalUtils.nop</h3>
+				
+
+				
+
+				<p class="parallelStepMargin">We&#39;ll miss you &#39;hello kity&#39;...</p>
+				
+
+				<h4><span onclick="expand_contract(event)" class="expandIcon" expanded="false" target="Scenario1_2_2_1">+</span>1.2.2.1 Request for: GoodLuck_2</h4>
+
+				<pre style="word-break:break-all; display:none;" onclick="document.location = '#Scenario1_2_2_1'" id="Scenario1_2_2_1">
+
+{
+    "message": "Good Luck in your new home!!! We'll miss you 'hello kity'...",
+    "requestMetrics": {
+        "setupTime": "0.005 seconds to setup",
+        "responseTime": "0.004 seconds to respond"
+    }
+}
+
+				</pre>
+
+				<h4><span onclick="expand_contract(event)" class="expandIcon" expanded="false" target="Scenario1_2_2_2">+</span>1.2.2.2 Response for: GoodLuck_2</h4>
+
+				<div class="parallelStepMargin">
+					Response Code: <b>200</b>
+					<br/>
+					Pass / Fail: <b>
+						<span style="color: #00BB00;">PASS</span>
+						
+						
+					</b>
+				</div>
+
+				<pre style="word-break:break-all; display:none;" onclick="document.location = '#Scenario1_2_2_2'" id="Scenario1_2_2_2">
+
+{
+    "message": "Good Luck in your new home!!! We'll miss you 'hello kity'..."
+}
+
+				</pre>
+
+				
+				<br/><br/>
+			
+			
+			
+				<h3 class="parallelStepMargin">1.2.3 GoodLuck_3 calling API Method: generalUtils.nop</h3>
+				
+
+				
+
+				<p class="parallelStepMargin">We&#39;ll miss you &#39;hello kity&#39;...</p>
+				
+
+				<h4><span onclick="expand_contract(event)" class="expandIcon" expanded="false" target="Scenario1_2_3_1">+</span>1.2.3.1 Request for: GoodLuck_3</h4>
+
+				<pre style="word-break:break-all; display:none;" onclick="document.location = '#Scenario1_2_3_1'" id="Scenario1_2_3_1">
+
+{
+    "message": "Good Luck in your new home!!! We'll miss you 'hello kity'...",
+    "requestMetrics": {
+        "setupTime": "0.006 seconds to setup",
+        "responseTime": "0.003 seconds to respond"
+    }
+}
+
+				</pre>
+
+				<h4><span onclick="expand_contract(event)" class="expandIcon" expanded="false" target="Scenario1_2_3_2">+</span>1.2.3.2 Response for: GoodLuck_3</h4>
+
+				<div class="parallelStepMargin">
+					Response Code: <b>200</b>
+					<br/>
+					Pass / Fail: <b>
+						<span style="color: #00BB00;">PASS</span>
+						
+						
+					</b>
+				</div>
+
+				<pre style="word-break:break-all; display:none;" onclick="document.location = '#Scenario1_2_3_2'" id="Scenario1_2_3_2">
+
+{
+    "message": "Good Luck in your new home!!! We'll miss you 'hello kity'..."
+}
+
+				</pre>
+
+				
+				<br/><br/>
+			
+			
+			
+				<h3 class="parallelStepMargin">1.2.4 GoodLuck_4 calling API Method: generalUtils.nop</h3>
+				
+
+				
+
+				<p class="parallelStepMargin">We&#39;ll miss you &#39;hello kity&#39;...</p>
+				
+
+				<h4><span onclick="expand_contract(event)" class="expandIcon" expanded="false" target="Scenario1_2_4_1">+</span>1.2.4.1 Request for: GoodLuck_4</h4>
+
+				<pre style="word-break:break-all; display:none;" onclick="document.location = '#Scenario1_2_4_1'" id="Scenario1_2_4_1">
+
+{
+    "message": "Good Luck in your new home!!! We'll miss you 'hello kity'...",
+    "requestMetrics": {
+        "setupTime": "0.006 seconds to setup",
+        "responseTime": "0.004 seconds to respond"
+    }
+}
+
+				</pre>
+
+				<h4><span onclick="expand_contract(event)" class="expandIcon" expanded="false" target="Scenario1_2_4_2">+</span>1.2.4.2 Response for: GoodLuck_4</h4>
+
+				<div class="parallelStepMargin">
+					Response Code: <b>200</b>
+					<br/>
+					Pass / Fail: <b>
+						<span style="color: #00BB00;">PASS</span>
+						
+						
+					</b>
+				</div>
+
+				<pre style="word-break:break-all; display:none;" onclick="document.location = '#Scenario1_2_4_2'" id="Scenario1_2_4_2">
+
+{
+    "message": "Good Luck in your new home!!! We'll miss you 'hello kity'..."
+}
+
+				</pre>
+
+				
+				<br/><br/>
+			
+			
+			
+				<h3 class="parallelStepMargin">1.2.5 GoodLuck_5 calling API Method: generalUtils.nop</h3>
+				
+
+				
+
+				<p class="parallelStepMargin">We&#39;ll miss you &#39;hello kity with updated&#39;...</p>
+				
+
+				<h4><span onclick="expand_contract(event)" class="expandIcon" expanded="false" target="Scenario1_2_5_1">+</span>1.2.5.1 Request for: GoodLuck_5</h4>
+
+				<pre style="word-break:break-all; display:none;" onclick="document.location = '#Scenario1_2_5_1'" id="Scenario1_2_5_1">
+
+{
+    "message": "Good Luck in your new home!!! We'll miss you 'hello kity with updated'...",
+    "requestMetrics": {
+        "setupTime": "0.007 seconds to setup",
+        "responseTime": "0.003 seconds to respond"
+    }
+}
+
+				</pre>
+
+				<h4><span onclick="expand_contract(event)" class="expandIcon" expanded="false" target="Scenario1_2_5_2">+</span>1.2.5.2 Response for: GoodLuck_5</h4>
+
+				<div class="parallelStepMargin">
+					Response Code: <b>200</b>
+					<br/>
+					Pass / Fail: <b>
+						<span style="color: #00BB00;">PASS</span>
+						
+						
+					</b>
+				</div>
+
+				<pre style="word-break:break-all; display:none;" onclick="document.location = '#Scenario1_2_5_2'" id="Scenario1_2_5_2">
+
+{
+    "message": "Good Luck in your new home!!! We'll miss you 'hello kity with updated'..."
+}
+
+				</pre>
+
+				
+				<br/><br/>
+			
+			
+			
+				<h3 class="parallelStepMargin">1.2.6 GoodLuck_6 calling API Method: generalUtils.nop</h3>
+				
+
+				
+
+				<p class="parallelStepMargin">We&#39;ll miss you &#39;pretty kitty&#39;...</p>
+				
+
+				<h4><span onclick="expand_contract(event)" class="expandIcon" expanded="false" target="Scenario1_2_6_1">+</span>1.2.6.1 Request for: GoodLuck_6</h4>
+
+				<pre style="word-break:break-all; display:none;" onclick="document.location = '#Scenario1_2_6_1'" id="Scenario1_2_6_1">
+
+{
+    "message": "Good Luck in your new home!!! We'll miss you 'pretty kitty'...",
+    "requestMetrics": {
+        "setupTime": "0.007 seconds to setup",
+        "responseTime": "0.003 seconds to respond"
+    }
+}
+
+				</pre>
+
+				<h4><span onclick="expand_contract(event)" class="expandIcon" expanded="false" target="Scenario1_2_6_2">+</span>1.2.6.2 Response for: GoodLuck_6</h4>
+
+				<div class="parallelStepMargin">
+					Response Code: <b>200</b>
+					<br/>
+					Pass / Fail: <b>
+						<span style="color: #00BB00;">PASS</span>
+						
+						
+					</b>
+				</div>
+
+				<pre style="word-break:break-all; display:none;" onclick="document.location = '#Scenario1_2_6_2'" id="Scenario1_2_6_2">
+
+{
+    "message": "Good Luck in your new home!!! We'll miss you 'pretty kitty'..."
+}
+
+				</pre>
+
+				
+				<br/><br/>
+			
+			
+			
+				<h3 class="parallelStepMargin">1.2.7 GoodLuck_7 calling API Method: generalUtils.nop</h3>
+				
+
+				
+
+				<p class="parallelStepMargin">We&#39;ll miss you &#39;pretty kitty&#39;...</p>
+				
+
+				<h4><span onclick="expand_contract(event)" class="expandIcon" expanded="false" target="Scenario1_2_7_1">+</span>1.2.7.1 Request for: GoodLuck_7</h4>
+
+				<pre style="word-break:break-all; display:none;" onclick="document.location = '#Scenario1_2_7_1'" id="Scenario1_2_7_1">
+
+{
+    "message": "Good Luck in your new home!!! We'll miss you 'pretty kitty'...",
+    "requestMetrics": {
+        "setupTime": "0.008 seconds to setup",
+        "responseTime": "0.003 seconds to respond"
+    }
+}
+
+				</pre>
+
+				<h4><span onclick="expand_contract(event)" class="expandIcon" expanded="false" target="Scenario1_2_7_2">+</span>1.2.7.2 Response for: GoodLuck_7</h4>
+
+				<div class="parallelStepMargin">
+					Response Code: <b>200</b>
+					<br/>
+					Pass / Fail: <b>
+						<span style="color: #00BB00;">PASS</span>
+						
+						
+					</b>
+				</div>
+
+				<pre style="word-break:break-all; display:none;" onclick="document.location = '#Scenario1_2_7_2'" id="Scenario1_2_7_2">
+
+{
+    "message": "Good Luck in your new home!!! We'll miss you 'pretty kitty'..."
+}
+
+				</pre>
+
+				
+				<br/><br/>
+			
+	</div>
+		</div>

@@ -1,0 +1,463 @@
+<h1>Test Summary</h1>
+<style>
+	body {
+		font: small arial,sans-serif;
+		font-size: 13px;
+	}
+	.expandIcon {
+		font-size: 150%;
+		position:relative; top: 2px;
+		margin-right: 6px;
+		color: #999999;
+	}
+	h1 {
+		text-decorationx: underline;
+	}
+	a {
+		color: #000044;
+	}
+	table {
+		border-radius: 5px;
+		font-size:105%;
+	}
+	table.sub {
+		border-width: 0px;
+	}
+	td.sub {
+		border-width: 0px;
+	}
+	th.sub {
+		border-width: 0px;
+	}
+	th.script {
+		font-size: 130%;
+		position:relative;
+		top: -2px;
+	}
+	th.step {
+		font-size: 105%;
+	}
+	th span {
+		font-size: 13px;
+	}
+	th.parallelStep {
+		font-size: 80%;
+	}
+	.pushRight {
+		text-align:right;
+	}
+	td {
+		border-radius: 5px;
+		padding:2px 4px 2px 4px;
+		margin:0px;
+		border-width:1px;
+	}
+	th {
+		border-radius: 5px;
+		padding:2px 4px 2px 4px;
+		margin:0px;
+		border-width:1px;
+	}
+	td.cellValue {
+		padding:2px 4px 2px 14px;
+	}
+	tr {
+		margin:0px;
+		border-width:0px;
+	}
+	pre {
+		border: 1px solid #cccccc;
+		border-radius: 5px;
+		background-color: #eeeeee;
+		font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+		font-size:90%;
+		padding:2px 4px 2px 4px;
+	}
+	a pre {
+		color:black;
+		text-decoration:none !important;
+	}
+</style>
+<script>
+	function expand_contract(e) {
+		if (e.srcElement.getAttribute("expanded") == "true") {
+			e.srcElement.setAttribute("expanded", "false");
+			e.srcElement.innerText = "+";
+			document.getElementById(e.srcElement.getAttribute("target")).style.display = "none";			
+		}
+		else {
+			e.srcElement.setAttribute("expanded", "true");
+			e.srcElement.innerText = "-";
+			document.getElementById(e.srcElement.getAttribute("target")).style.display = "block";	
+			document.getElementById(e.srcElement.getAttribute("target")).scrollIntoView();
+		}
+	}
+	function expand_contract2(e) {
+		var target = document.getElementById(e.srcElement.getAttribute("target"));
+		if (e.srcElement.getAttribute("expanded") == "true") {
+			e.srcElement.setAttribute("expanded", "false");
+			e.srcElement.innerText = "+";
+			e.srcElement.setAttribute("contents", target.innerHTML);
+			target.innerHTML = "";
+		}
+		else {
+			e.srcElement.setAttribute("expanded", "true");
+			e.srcElement.innerText = "-";
+			target.innerHTML = e.srcElement.getAttribute("contents");
+		}
+	}
+</script>
+<table border=0>
+	<tr>
+		<td><b>Environment</b></td>
+		<td class="cellValue"></td>
+	</tr>
+	<tr>
+		<td><b>Date / Time</b></td>
+		<td class="cellValue"></td>
+	</tr>
+	<tr>
+		<td><b>Total Execution Time</b></td>
+		<td class="cellValue"></td>
+	</tr>
+	<tr>
+		<td><b>Test Suite Name</b></td>
+		<td class="cellValue"></td>
+	</tr>
+	<tr>
+		<td><b>Test Suite Description</b></td>
+		<td class="cellValue"></td>
+	</tr>
+	<tr>
+		<td><b>Number of scenarios tested</b></td>
+		<td class="cellValue"><b>1</b></td>
+	</tr>
+	<tr>
+		<td><b>Pass</b></td>
+		<td class="cellValue" style="color: #00BB00;"><b>1</b></td>
+	</tr>
+	<tr>
+		<td><b>Fail</b></td>
+		<td class="cellValue" style="color: #BB0000"><b>0</b></td>
+	</tr>
+</table>
+<br/><br/><br/>
+
+<h1>Test Results</h1>
+
+<table style="table-layout: fixed; width: 100%; background-color:#cccccc;" border=1>
+	<tr>
+		<th width="5%" style="word-break:break-word;">#</th>
+		<th width="15%" style="word-break:break-word;">Name</th>
+		<th width="25%" style="word-break:break-word;">Title</th>
+		<th width="35%" style="word-break:break-word;">Description</th>
+		<th width="10%" style="word-break:break-word;">See Details</th>
+		<th width="10%" style="word-break:break-word;">Pass / Fail</th>
+	</tr>
+</table>
+
+<table style="table-layout: fixed; width: 100%" border=1>
+
+
+	<tr><a name="BackToDetails1"></a>
+		<th class="script" width="5%" style="word-break:break-word;"><span onclick="expand_contract2(event)" class="expandIcon" expanded="true" target="Scenario1_steps">-</span>1</th>
+		<td width="15%" style="word-break:break-word;">testMyAPI_AnotherParametersFromProperties</td>
+		<td width="25%" style="word-break:break-word;">Test Script for the API: myAPI</td>
+		<td width="35%" style="word-break:break-word;">Add Steps by cutting and pasting from the myAPI Script Template and then editing the parameters for each Test Step Method Call...</td>
+		<th width="10%" style="word-break:break-word;"><a href="#Scenario1">Scenario</a></th>
+		<th width="10%" style="word-break:break-word;">
+			<span style="color: #00BB00;">PASS</span>
+			
+			
+		</th>
+	</tr>
+	<tr id="Scenario1_steps">
+		<td colspan=6  class="sub">
+			<table class="sub" style="table-layout: fixed; width: 100%" border=1>
+				
+				
+				
+					<tr id="Scenario1_steps">
+						<th class="step sub" width="5%" style="word-break:break-word;" class="pushRight">1</th>
+						<td width="20%" style="word-break:break-word;">getPetByIdOne</td>
+						<td width="30%" style="word-break:break-word;">Find pet by ID</td>
+						<td width="25%" style="word-break:break-word;">Response Code: <b>404</b></td>
+						<th width="10%" style="word-break:break-word;"><a href="#Scenario1_1">Step</a></th>
+						<th width="10%" style="word-break:break-word;">
+							<span style="color: #00BB00;">PASS</span>
+							
+							
+						</th>
+					</tr>
+					
+				
+				
+				
+					<tr id="Scenario1_steps">
+						<th class="step sub" width="5%" style="word-break:break-word;" class="pushRight">2</th>
+						<td width="20%" style="word-break:break-word;">getPetByIdTwo</td>
+						<td width="30%" style="word-break:break-word;">Find pet by ID</td>
+						<td width="25%" style="word-break:break-word;">Response Code: <b>200</b></td>
+						<th width="10%" style="word-break:break-word;"><a href="#Scenario1_2">Step</a></th>
+						<th width="10%" style="word-break:break-word;">
+							<span style="color: #00BB00;">PASS</span>
+							
+							
+						</th>
+					</tr>
+					
+				
+				
+				
+					<tr id="Scenario1_steps">
+						<th class="step sub" width="5%" style="word-break:break-word;" class="pushRight">3</th>
+						<td width="20%" style="word-break:break-word;">lastStep</td>
+						<td width="30%" style="word-break:break-word;">This will execute ONLY if ALL prior steps succeeded...</td>
+						<td width="25%" style="word-break:break-word;">Response Code: <b>200</b></td>
+						<th width="10%" style="word-break:break-word;"><a href="#Scenario1_3">Step</a></th>
+						<th width="10%" style="word-break:break-word;">
+							<span style="color: #00BB00;">PASS</span>
+							
+							
+						</th>
+					</tr>
+					
+				
+				
+				
+					<tr id="Scenario1_steps">
+						<th class="step sub" width="5%" style="word-break:break-word;" class="pushRight">4</th>
+						<td width="20%" style="word-break:break-word;">ScriptSuccess</td>
+						<td width="30%" style="word-break:break-word;">This Script PASSED</td>
+						<td width="25%" style="word-break:break-word;">Response Code: <b>200</b></td>
+						<th width="10%" style="word-break:break-word;"><a href="#Scenario1_4">Step</a></th>
+						<th width="10%" style="word-break:break-word;">
+							<span style="color: #00BB00;">PASS</span>
+							
+							
+						</th>
+					</tr>
+					
+				</table><br/><br/>
+		</td>
+	</tr></table>
+
+<br/><br/><br/><br/><br/><br/>
+
+
+
+<h1><span onclick="expand_contract(event)" class="expandIcon" expanded="true" target="Scenario1_body">-</span><a name="Scenario1"></a><a href="#BackToDetails1" class="backLink" title="Back to Summary for Scenario #1">Scenario #1</a> - Test Script for the API: myAPI </h1>
+
+
+<div id="Scenario1_body">
+
+	
+	
+	
+
+	<h2><span onclick="expand_contract(event)" class="expandIcon" expanded="true" target="Scenario1_1_body">-</span><a name="Scenario1_1"></a>1.1 getPetByIdOne calling API Method: getPetById</h2>
+	
+
+	
+
+	<div id="Scenario1_1_body">
+		Find pet by ID
+
+		2015-07-23 21:23:32 GMT
+		<h3><span onclick="expand_contract(event)" class="expandIcon" expanded="false" target="Scenario1_1_1">+</span>1.1.1 Request for: getPetByIdOne</h3>
+
+		<pre style="word-break:break-word; display:none;" onclick="document.location = '#Scenario1_1_1'" id="Scenario1_1_1">
+
+{
+    "method": "GET",
+    "uri": "http://petstore.swagger.io/v2/pet/-2",
+    "qs": {},
+    "headers": {
+        "Authorization": "Bearer undefined"
+    }
+}
+
+		</pre>
+
+		<h3><span onclick="expand_contract(event)" class="expandIcon" expanded="false" target="Scenario1_1_2">+</span>1.1.2 Response for: getPetByIdOne</h3>
+
+		Response Code: <b>404</b>
+		<br/>
+		Pass / Fail: <b>
+			<span style="color: #00BB00;">PASS</span>
+			
+			
+		</b>
+
+		<pre style="word-break:break-word; display:none;" onclick="document.location = '#Scenario1_1_2'" id="Scenario1_1_2">
+
+{
+    "code": 1,
+    "type": "error",
+    "message": "Pet not found"
+}
+
+		</pre>
+
+		<h3><span onclick="expand_contract(event)" class="expandIcon" expanded="false" target="Scenario1_1_3">+</span>1.1.3 Test Results for: getPetByIdOne</h3>
+
+		<pre style="word-break:break-word; display:none;" onclick="document.location = '#Scenario1_1_3'" id="Scenario1_1_3">
+
+{
+    "pass": true,
+    "asserts": [{
+        "responseCode": "this.responseCode",
+        "assert": "(responseCode > 200)",
+        "pass": true
+    }]
+}
+
+		</pre>
+		
+	</div>
+		
+	
+	
+
+	<h2><span onclick="expand_contract(event)" class="expandIcon" expanded="true" target="Scenario1_2_body">-</span><a name="Scenario1_2"></a>1.2 getPetByIdTwo calling API Method: getPetById</h2>
+	
+
+	
+
+	<div id="Scenario1_2_body">
+		Find pet by ID
+
+		2015-07-23 21:23:35 GMT
+		<h3><span onclick="expand_contract(event)" class="expandIcon" expanded="false" target="Scenario1_2_1">+</span>1.2.1 Request for: getPetByIdTwo</h3>
+
+		<pre style="word-break:break-word; display:none;" onclick="document.location = '#Scenario1_2_1'" id="Scenario1_2_1">
+
+{
+    "method": "GET",
+    "uri": "http://petstore.swagger.io/v2/pet/1",
+    "qs": {},
+    "headers": {
+        "Authorization": "Bearer undefined"
+    }
+}
+
+		</pre>
+
+		<h3><span onclick="expand_contract(event)" class="expandIcon" expanded="false" target="Scenario1_2_2">+</span>1.2.2 Response for: getPetByIdTwo</h3>
+
+		Response Code: <b>200</b>
+		<br/>
+		Pass / Fail: <b>
+			<span style="color: #00BB00;">PASS</span>
+			
+			
+		</b>
+
+		<pre style="word-break:break-word; display:none;" onclick="document.location = '#Scenario1_2_2'" id="Scenario1_2_2">
+
+{
+    "id": 1,
+    "category": {
+        "id": 1,
+        "name": "harry"
+    },
+    "name": "myPet",
+    "photoUrls": ["string"],
+    "tags": [{
+        "id": 0,
+        "name": "string"
+    }],
+    "status": "available"
+}
+
+		</pre>
+
+		
+	</div>
+		
+	
+	
+
+	<h2><span onclick="expand_contract(event)" class="expandIcon" expanded="true" target="Scenario1_3_body">-</span><a name="Scenario1_3"></a>1.3 lastStep calling API Method: generalUtils.pause</h2>
+	
+
+	
+
+	<div id="Scenario1_3_body">
+		This will execute ONLY if ALL prior steps succeeded...
+
+		2015-07-23 21:23:39 GMT
+		<h3><span onclick="expand_contract(event)" class="expandIcon" expanded="false" target="Scenario1_3_1">+</span>1.3.1 Request for: lastStep</h3>
+
+		<pre style="word-break:break-word; display:none;" onclick="document.location = '#Scenario1_3_1'" id="Scenario1_3_1">
+
+{
+    "interval": 0.25
+}
+
+		</pre>
+
+		<h3><span onclick="expand_contract(event)" class="expandIcon" expanded="false" target="Scenario1_3_2">+</span>1.3.2 Response for: lastStep</h3>
+
+		Response Code: <b>200</b>
+		<br/>
+		Pass / Fail: <b>
+			<span style="color: #00BB00;">PASS</span>
+			
+			
+		</b>
+
+		<pre style="word-break:break-word; display:none;" onclick="document.location = '#Scenario1_3_2'" id="Scenario1_3_2">
+
+{
+    "message": "Resuming Script after pausing: 0.25 seconds"
+}
+
+		</pre>
+
+		
+	</div>
+		
+	
+	
+
+	<h2><span onclick="expand_contract(event)" class="expandIcon" expanded="true" target="Scenario1_4_body">-</span><a name="Scenario1_4"></a>1.4 ScriptSuccess calling API Method: generalUtils.pause</h2>
+	
+
+	
+
+	<div id="Scenario1_4_body">
+		This Script PASSED
+
+		2015-07-23 21:23:42 GMT
+		<h3><span onclick="expand_contract(event)" class="expandIcon" expanded="false" target="Scenario1_4_1">+</span>1.4.1 Request for: ScriptSuccess</h3>
+
+		<pre style="word-break:break-word; display:none;" onclick="document.location = '#Scenario1_4_1'" id="Scenario1_4_1">
+
+{
+    "interval": 0.25
+}
+
+		</pre>
+
+		<h3><span onclick="expand_contract(event)" class="expandIcon" expanded="false" target="Scenario1_4_2">+</span>1.4.2 Response for: ScriptSuccess</h3>
+
+		Response Code: <b>200</b>
+		<br/>
+		Pass / Fail: <b>
+			<span style="color: #00BB00;">PASS</span>
+			
+			
+		</b>
+
+		<pre style="word-break:break-word; display:none;" onclick="document.location = '#Scenario1_4_2'" id="Scenario1_4_2">
+
+{
+    "message": "Resuming Script after pausing: 0.25 seconds"
+}
+
+		</pre>
+
+		
+	</div>
+		</div>

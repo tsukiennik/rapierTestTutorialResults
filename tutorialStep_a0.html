@@ -1,0 +1,1347 @@
+<h1>Test Summary</h1>
+<style>
+	body {
+		font: small arial,sans-serif;
+		font-size: 13px;
+	}
+	.expandIcon {
+		font-size: 150%;
+		position:relative; top: 2px;
+		margin-right: 6px;
+		color: #999999;
+	}
+	h1 {
+		text-decorationx: underline;
+	}
+	a {
+		color: #000044;
+	}
+	table {
+		border-radius: 5px;
+		font-size:105%;
+	}
+	table.sub {
+		border-width: 0px;
+	}
+	td.sub {
+		border-width: 0px;
+	}
+	th.sub {
+		border-width: 0px;
+	}
+	th.script {
+		font-size: 130%;
+		position:relative;
+		top: -2px;
+	}
+	th.step {
+		font-size: 105%;
+	}
+	th span {
+		font-size: 13px;
+	}
+	th.parallelStep {
+		font-size: 80%;
+	}
+	.pushRight {
+		text-align:right;
+	}
+	td {
+		border-radius: 5px;
+		padding:2px 4px 2px 4px;
+		margin:0px;
+		border-width:1px;
+	}
+	th {
+		border-radius: 5px;
+		padding:2px 4px 2px 4px;
+		margin:0px;
+		border-width:1px;
+	}
+	td.cellValue {
+		padding:2px 4px 2px 14px;
+	}
+	tr {
+		margin:0px;
+		border-width:0px;
+	}
+	pre {
+		border: 1px solid #cccccc;
+		border-radius: 5px;
+		background-color: #eeeeee;
+		font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+		font-size:90%;
+		padding:2px 4px 2px 4px;
+	}
+	a pre {
+		color:black;
+		text-decoration:none !important;
+	}
+</style>
+<script>
+	function expand_contract(e) {
+		if (e.srcElement.getAttribute("expanded") == "true") {
+			e.srcElement.setAttribute("expanded", "false");
+			e.srcElement.innerText = "+";
+			document.getElementById(e.srcElement.getAttribute("target")).style.display = "none";			
+		}
+		else {
+			e.srcElement.setAttribute("expanded", "true");
+			e.srcElement.innerText = "-";
+			document.getElementById(e.srcElement.getAttribute("target")).style.display = "block";	
+			document.getElementById(e.srcElement.getAttribute("target")).scrollIntoView();
+		}
+	}
+	function expand_contract2(e) {
+		var target = document.getElementById(e.srcElement.getAttribute("target"));
+		if (e.srcElement.getAttribute("expanded") == "true") {
+			e.srcElement.setAttribute("expanded", "false");
+			e.srcElement.innerText = "+";
+			e.srcElement.setAttribute("contents", target.innerHTML);
+			target.innerHTML = "";
+		}
+		else {
+			e.srcElement.setAttribute("expanded", "true");
+			e.srcElement.innerText = "-";
+			target.innerHTML = e.srcElement.getAttribute("contents");
+		}
+	}
+</script>
+<table border=0>
+	<tr>
+		<td><b>Environment</b></td>
+		<td class="cellValue">development</td>
+	</tr>
+	<tr>
+		<td><b>Date / Time</b></td>
+		<td class="cellValue">2015-07-24 20.55.32 GMT</td>
+	</tr>
+	<tr>
+		<td><b>Total Execution Time</b></td>
+		<td class="cellValue">10.996 seconds</td>
+	</tr>
+	<tr>
+		<td><b>Test Suite Name</b></td>
+		<td class="cellValue">Sample Session which will run two Test Scripts</td>
+	</tr>
+	<tr>
+		<td><b>Test Suite Description</b></td>
+		<td class="cellValue">Sessions allow us to break up our working when testing complex APIs...</td>
+	</tr>
+	<tr>
+		<td><b>Number of scenarios tested</b></td>
+		<td class="cellValue"><b>2</b></td>
+	</tr>
+	<tr>
+		<td><b>Pass</b></td>
+		<td class="cellValue" style="color: #00BB00;"><b>2</b></td>
+	</tr>
+	<tr>
+		<td><b>Fail</b></td>
+		<td class="cellValue" style="color: #BB0000"><b>0</b></td>
+	</tr>
+</table>
+<br/><br/><br/>
+
+<h1>Test Results</h1>
+
+<table style="table-layout: fixed; width: 100%; background-color:#cccccc;" border=1>
+	<tr>
+		<th width="5%" style="word-break:break-word;">#</th>
+		<th width="15%" style="word-break:break-word;">Name</th>
+		<th width="25%" style="word-break:break-word;">Title</th>
+		<th width="35%" style="word-break:break-word;">Description</th>
+		<th width="10%" style="word-break:break-word;">See Details</th>
+		<th width="10%" style="word-break:break-word;">Pass / Fail</th>
+	</tr>
+</table>
+
+<table style="table-layout: fixed; width: 100%" border=1>
+
+
+	<tr><a name="BackToDetails1"></a>
+		<th class="script" width="5%" style="word-break:break-word;"><span onclick="expand_contract2(event)" class="expandIcon" expanded="true" target="Scenario1_steps">-</span>1</th>
+		<td width="15%" style="word-break:break-word;">testMyAPI_ParametersFromProperties</td>
+		<td width="25%" style="word-break:break-word;">Using properties to de-couple scripts from configuration differences</td>
+		<td width="35%" style="word-break:break-word;">Properties files allow for re-use of scripts in a variety of configurations without modification...</td>
+		<th width="10%" style="word-break:break-word;"><a href="#Scenario1">Scenario</a></th>
+		<th width="10%" style="word-break:break-word;">
+			<span style="color: #00BB00;">PASS</span>
+			
+			
+		</th>
+	</tr>
+	<tr id="Scenario1_steps">
+		<td colspan=6  class="sub">
+			<table class="sub" style="table-layout: fixed; width: 100%" border=1>
+				
+				
+				
+					<tr id="Scenario1_steps">
+						<th class="step sub" width="5%" style="word-break:break-word;" class="pushRight">1</th>
+						<td width="20%" style="word-break:break-word;">findPetsByStatusOne</td>
+						<td width="30%" style="word-break:break-word;">Finds Pets by status One</td>
+						<td width="25%" style="word-break:break-word;">Response Code: <b>200</b></td>
+						<th width="10%" style="word-break:break-word;"><a href="#Scenario1_1">Step</a></th>
+						<th width="10%" style="word-break:break-word;">
+							<span style="color: #00BB00;">PASS</span>
+							
+							
+						</th>
+					</tr>
+					
+				
+				
+				
+					<tr id="Scenario1_steps">
+						<th class="step sub" width="5%" style="word-break:break-word;" class="pushRight">2</th>
+						<td width="20%" style="word-break:break-word;">findPetsByStatusTwo</td>
+						<td width="30%" style="word-break:break-word;">Finds Pets by status Two</td>
+						<td width="25%" style="word-break:break-word;">Response Code: <b>200</b></td>
+						<th width="10%" style="word-break:break-word;"><a href="#Scenario1_2">Step</a></th>
+						<th width="10%" style="word-break:break-word;">
+							<span style="color: #00BB00;">PASS</span>
+							
+							
+						</th>
+					</tr>
+					
+				</table><br/><br/>
+		</td>
+	</tr>
+
+	<tr><a name="BackToDetails2"></a>
+		<th class="script" width="5%" style="word-break:break-word;"><span onclick="expand_contract2(event)" class="expandIcon" expanded="true" target="Scenario2_steps">-</span>2</th>
+		<td width="15%" style="word-break:break-word;">testMyAPI_AnotherParametersFromProperties</td>
+		<td width="25%" style="word-break:break-word;">Test Script for the API: myAPI</td>
+		<td width="35%" style="word-break:break-word;">Add Steps by cutting and pasting from the myAPI Script Template and then editing the parameters for each Test Step Method Call...</td>
+		<th width="10%" style="word-break:break-word;"><a href="#Scenario2">Scenario</a></th>
+		<th width="10%" style="word-break:break-word;">
+			<span style="color: #00BB00;">PASS</span>
+			
+			
+		</th>
+	</tr>
+	<tr id="Scenario2_steps">
+		<td colspan=6  class="sub">
+			<table class="sub" style="table-layout: fixed; width: 100%" border=1>
+				
+				
+				
+					<tr id="Scenario2_steps">
+						<th class="step sub" width="5%" style="word-break:break-word;" class="pushRight">1</th>
+						<td width="20%" style="word-break:break-word;">getPetByIdOne</td>
+						<td width="30%" style="word-break:break-word;">Find pet by ID</td>
+						<td width="25%" style="word-break:break-word;">Response Code: <b>200</b></td>
+						<th width="10%" style="word-break:break-word;"><a href="#Scenario2_1">Step</a></th>
+						<th width="10%" style="word-break:break-word;">
+							<span style="color: #00BB00;">PASS</span>
+							
+							
+						</th>
+					</tr>
+					
+				
+				
+				
+					<tr id="Scenario2_steps">
+						<th class="step sub" width="5%" style="word-break:break-word;" class="pushRight">2</th>
+						<td width="20%" style="word-break:break-word;">getPetByIdTwo</td>
+						<td width="30%" style="word-break:break-word;">Find pet by ID</td>
+						<td width="25%" style="word-break:break-word;">Response Code: <b>200</b></td>
+						<th width="10%" style="word-break:break-word;"><a href="#Scenario2_2">Step</a></th>
+						<th width="10%" style="word-break:break-word;">
+							<span style="color: #00BB00;">PASS</span>
+							
+							
+						</th>
+					</tr>
+					
+				
+				
+				
+					<tr id="Scenario2_steps">
+						<th class="step sub" width="5%" style="word-break:break-word;" class="pushRight">3</th>
+						<td width="20%" style="word-break:break-word;">lastStep</td>
+						<td width="30%" style="word-break:break-word;">This will execute ONLY if ALL prior steps succeeded...</td>
+						<td width="25%" style="word-break:break-word;">Response Code: <b>200</b></td>
+						<th width="10%" style="word-break:break-word;"><a href="#Scenario2_3">Step</a></th>
+						<th width="10%" style="word-break:break-word;">
+							<span style="color: #00BB00;">PASS</span>
+							
+							
+						</th>
+					</tr>
+					
+				
+				
+				
+					<tr id="Scenario2_steps">
+						<th class="step sub" width="5%" style="word-break:break-word;" class="pushRight">4</th>
+						<td width="20%" style="word-break:break-word;">ScriptSuccess</td>
+						<td width="30%" style="word-break:break-word;">This Script PASSED</td>
+						<td width="25%" style="word-break:break-word;">Response Code: <b>200</b></td>
+						<th width="10%" style="word-break:break-word;"><a href="#Scenario2_4">Step</a></th>
+						<th width="10%" style="word-break:break-word;">
+							<span style="color: #00BB00;">PASS</span>
+							
+							
+						</th>
+					</tr>
+					
+				</table><br/><br/>
+		</td>
+	</tr></table>
+
+<br/><br/><br/><br/><br/><br/>
+
+
+
+<h1><span onclick="expand_contract(event)" class="expandIcon" expanded="true" target="Scenario1_body">-</span><a name="Scenario1"></a><a href="#BackToDetails1" class="backLink" title="Back to Summary for Scenario #1">Scenario #1</a> - Using properties to de-couple scripts from configuration differences </h1>
+
+
+<div id="Scenario1_body">
+
+	
+	
+	
+
+	<h2><span onclick="expand_contract(event)" class="expandIcon" expanded="true" target="Scenario1_1_body">-</span><a name="Scenario1_1"></a>1.1 findPetsByStatusOne calling API Method: findPetsByStatus</h2>
+	
+
+	
+
+	<div id="Scenario1_1_body">
+		Finds Pets by status One
+
+		2015-07-24 20:55:22 GMT
+		<h3><span onclick="expand_contract(event)" class="expandIcon" expanded="false" target="Scenario1_1_1">+</span>1.1.1 Request for: findPetsByStatusOne</h3>
+
+		<pre style="word-break:break-word; display:none;" onclick="document.location = '#Scenario1_1_1'" id="Scenario1_1_1">
+
+{
+    "method": "GET",
+    "uri": "http://petstore.swagger.io/v2/pet/findByStatus",
+    "qs": {
+        "status": "sold"
+    },
+    "headers": {
+        "Authorization": "Bearer undefined"
+    }
+}
+
+		</pre>
+
+		<h3><span onclick="expand_contract(event)" class="expandIcon" expanded="false" target="Scenario1_1_2">+</span>1.1.2 Response for: findPetsByStatusOne</h3>
+
+		Response Code: <b>200</b>
+		<br/>
+		Pass / Fail: <b>
+			<span style="color: #00BB00;">PASS</span>
+			
+			
+		</b>
+
+		<pre style="word-break:break-word; display:none;" onclick="document.location = '#Scenario1_1_2'" id="Scenario1_1_2">
+
+[{
+    "id": 1437533240,
+    "category": {
+        "id": 1437533240,
+        "name": "dog"
+    },
+    "name": "hello kity",
+    "photoUrls": ["http://foo.bar.com/1", "http://foo.bar.com/2"],
+    "tags": [{
+        "id": 1437533240,
+        "name": "blank"
+    }],
+    "status": "sold"
+}, {
+    "id": 1437533243,
+    "category": {
+        "id": 1437533243,
+        "name": "dog"
+    },
+    "name": "hello kity with updated",
+    "photoUrls": ["http://foo.bar.com/1", "http://foo.bar.com/2"],
+    "tags": [{
+        "id": 1437533243,
+        "name": "blank"
+    }],
+    "status": "sold"
+}, {
+    "id": 1437533250,
+    "category": {
+        "id": 1437533250,
+        "name": "dog"
+    },
+    "name": "hello kity",
+    "photoUrls": ["http://foo.bar.com/1", "http://foo.bar.com/2"],
+    "tags": [{
+        "id": 1437533250,
+        "name": "blank"
+    }],
+    "status": "sold"
+}, {
+    "id": 1437533262,
+    "category": {
+        "id": 1437533262,
+        "name": "dog"
+    },
+    "name": "hello kity",
+    "photoUrls": ["http://foo.bar.com/1", "http://foo.bar.com/2"],
+    "tags": [{
+        "id": 1437533262,
+        "name": "blank"
+    }],
+    "status": "sold"
+}, {
+    "id": 1437534222,
+    "category": {
+        "id": 1437534222,
+        "name": "dog"
+    },
+    "name": "hello kity",
+    "photoUrls": ["http://foo.bar.com/1", "http://foo.bar.com/2"],
+    "tags": [{
+        "id": 1437534222,
+        "name": "blank"
+    }],
+    "status": "sold"
+}, {
+    "id": 1437534225,
+    "category": {
+        "id": 1437534225,
+        "name": "dog"
+    },
+    "name": "hello kity with updated",
+    "photoUrls": ["http://foo.bar.com/1", "http://foo.bar.com/2"],
+    "tags": [{
+        "id": 1437534225,
+        "name": "blank"
+    }],
+    "status": "sold"
+}, {
+    "id": 1437534229,
+    "category": {
+        "id": 1437534229,
+        "name": "dog"
+    },
+    "name": "hello kity",
+    "photoUrls": ["http://foo.bar.com/1", "http://foo.bar.com/2"],
+    "tags": [{
+        "id": 1437534229,
+        "name": "blank"
+    }],
+    "status": "sold"
+}, {
+    "id": 1437534240,
+    "category": {
+        "id": 1437534240,
+        "name": "dog"
+    },
+    "name": "hello kity",
+    "photoUrls": ["http://foo.bar.com/1", "http://foo.bar.com/2"],
+    "tags": [{
+        "id": 1437534240,
+        "name": "blank"
+    }],
+    "status": "sold"
+}, {
+    "id": 1437534242,
+    "category": {
+        "id": 1437534242,
+        "name": "dog"
+    },
+    "name": "hello kity",
+    "photoUrls": ["http://foo.bar.com/1", "http://foo.bar.com/2"],
+    "tags": [{
+        "id": 1437534242,
+        "name": "blank"
+    }],
+    "status": "sold"
+}, {
+    "id": 1437534252,
+    "category": {
+        "id": 1437534252,
+        "name": "dog"
+    },
+    "name": "hello kity",
+    "photoUrls": ["http://foo.bar.com/1", "http://foo.bar.com/2"],
+    "tags": [{
+        "id": 1437534252,
+        "name": "blank"
+    }],
+    "status": "sold"
+}, {
+    "id": 1437548901,
+    "category": {
+        "id": 1437548901,
+        "name": "dog"
+    },
+    "name": "hello kity",
+    "photoUrls": ["http://foo.bar.com/1", "http://foo.bar.com/2"],
+    "tags": [{
+        "id": 1437548901,
+        "name": "blank"
+    }],
+    "status": "sold"
+}, {
+    "id": 1437548907,
+    "category": {
+        "id": 1437548907,
+        "name": "dog"
+    },
+    "name": "hello kity",
+    "photoUrls": ["http://foo.bar.com/1", "http://foo.bar.com/2"],
+    "tags": [{
+        "id": 1437548907,
+        "name": "blank"
+    }],
+    "status": "sold"
+}, {
+    "id": 1437548911,
+    "category": {
+        "id": 1437548911,
+        "name": "dog"
+    },
+    "name": "hello kity",
+    "photoUrls": ["http://foo.bar.com/1", "http://foo.bar.com/2"],
+    "tags": [{
+        "id": 1437548911,
+        "name": "blank"
+    }],
+    "status": "sold"
+}, {
+    "id": 1437548913,
+    "category": {
+        "id": 1437548913,
+        "name": "dog"
+    },
+    "name": "hello kity",
+    "photoUrls": ["http://foo.bar.com/1", "http://foo.bar.com/2"],
+    "tags": [{
+        "id": 1437548913,
+        "name": "blank"
+    }],
+    "status": "sold"
+}, {
+    "id": 1437548916,
+    "category": {
+        "id": 1437548916,
+        "name": "dog"
+    },
+    "name": "hello kity",
+    "photoUrls": ["http://foo.bar.com/1", "http://foo.bar.com/2"],
+    "tags": [{
+        "id": 1437548916,
+        "name": "blank"
+    }],
+    "status": "sold"
+}, {
+    "id": 1437548918,
+    "category": {
+        "id": 1437548918,
+        "name": "dog"
+    },
+    "name": "hello kity with updated",
+    "photoUrls": ["http://foo.bar.com/1", "http://foo.bar.com/2"],
+    "tags": [{
+        "id": 1437548918,
+        "name": "blank"
+    }],
+    "status": "sold"
+}, {
+    "id": 1437549583,
+    "category": {
+        "id": 1437549583,
+        "name": "dog"
+    },
+    "name": "hello kity",
+    "photoUrls": ["http://foo.bar.com/1", "http://foo.bar.com/2"],
+    "tags": [{
+        "id": 1437549583,
+        "name": "blank"
+    }],
+    "status": "sold"
+}, {
+    "id": 1437549585,
+    "category": {
+        "id": 1437549585,
+        "name": "dog"
+    },
+    "name": "hello kity",
+    "photoUrls": ["http://foo.bar.com/1", "http://foo.bar.com/2"],
+    "tags": [{
+        "id": 1437549585,
+        "name": "blank"
+    }],
+    "status": "sold"
+}, {
+    "id": 1437549587,
+    "category": {
+        "id": 1437549587,
+        "name": "dog"
+    },
+    "name": "hello kity",
+    "photoUrls": ["http://foo.bar.com/1", "http://foo.bar.com/2"],
+    "tags": [{
+        "id": 1437549587,
+        "name": "blank"
+    }],
+    "status": "sold"
+}, {
+    "id": 1437549595,
+    "category": {
+        "id": 1437549595,
+        "name": "dog"
+    },
+    "name": "hello kity with updated",
+    "photoUrls": ["http://foo.bar.com/1", "http://foo.bar.com/2"],
+    "tags": [{
+        "id": 1437549595,
+        "name": "blank"
+    }],
+    "status": "sold"
+}, {
+    "id": 1437549598,
+    "category": {
+        "id": 1437549598,
+        "name": "dog"
+    },
+    "name": "hello kity",
+    "photoUrls": ["http://foo.bar.com/1", "http://foo.bar.com/2"],
+    "tags": [{
+        "id": 1437549598,
+        "name": "blank"
+    }],
+    "status": "sold"
+}, {
+    "id": 1437549601,
+    "category": {
+        "id": 1437549601,
+        "name": "dog"
+    },
+    "name": "hello kity",
+    "photoUrls": ["http://foo.bar.com/1", "http://foo.bar.com/2"],
+    "tags": [{
+        "id": 1437549601,
+        "name": "blank"
+    }],
+    "status": "sold"
+}, {
+    "id": 1437549951,
+    "category": {
+        "id": 1437549951,
+        "name": "dog"
+    },
+    "name": "hello kity",
+    "photoUrls": ["http://foo.bar.com/1", "http://foo.bar.com/2"],
+    "tags": [{
+        "id": 1437549951,
+        "name": "blank"
+    }],
+    "status": "sold"
+}, {
+    "id": 1437549953,
+    "category": {
+        "id": 1437549953,
+        "name": "dog"
+    },
+    "name": "hello kity",
+    "photoUrls": ["http://foo.bar.com/1", "http://foo.bar.com/2"],
+    "tags": [{
+        "id": 1437549953,
+        "name": "blank"
+    }],
+    "status": "sold"
+}, {
+    "id": 1437549961,
+    "category": {
+        "id": 1437549961,
+        "name": "dog"
+    },
+    "name": "hello kity with updated",
+    "photoUrls": ["http://foo.bar.com/1", "http://foo.bar.com/2"],
+    "tags": [{
+        "id": 1437549961,
+        "name": "blank"
+    }],
+    "status": "sold"
+}, {
+    "id": 1437549965,
+    "category": {
+        "id": 1437549965,
+        "name": "dog"
+    },
+    "name": "hello kity",
+    "photoUrls": ["http://foo.bar.com/1", "http://foo.bar.com/2"],
+    "tags": [{
+        "id": 1437549965,
+        "name": "blank"
+    }],
+    "status": "sold"
+}, {
+    "id": 1437549967,
+    "category": {
+        "id": 1437549967,
+        "name": "dog"
+    },
+    "name": "hello kity",
+    "photoUrls": ["http://foo.bar.com/1", "http://foo.bar.com/2"],
+    "tags": [{
+        "id": 1437549967,
+        "name": "blank"
+    }],
+    "status": "sold"
+}, {
+    "id": 1437549976,
+    "category": {
+        "id": 1437549976,
+        "name": "dog"
+    },
+    "name": "hello kity",
+    "photoUrls": ["http://foo.bar.com/1", "http://foo.bar.com/2"],
+    "tags": [{
+        "id": 1437549976,
+        "name": "blank"
+    }],
+    "status": "sold"
+}, {
+    "id": 1437551285,
+    "category": {
+        "id": 1437551285,
+        "name": "dog"
+    },
+    "name": "hello kity",
+    "photoUrls": ["http://foo.bar.com/1", "http://foo.bar.com/2"],
+    "tags": [{
+        "id": 1437551285,
+        "name": "blank"
+    }],
+    "status": "sold"
+}, {
+    "id": 1437551298,
+    "category": {
+        "id": 1437551298,
+        "name": "dog"
+    },
+    "name": "hello kity",
+    "photoUrls": ["http://foo.bar.com/1", "http://foo.bar.com/2"],
+    "tags": [{
+        "id": 1437551298,
+        "name": "swagger-codegen-python-pet-tag"
+    }],
+    "status": "sold"
+}, {
+    "id": 1437551301,
+    "category": {
+        "id": 1437551301,
+        "name": "dog"
+    },
+    "name": "hello kity",
+    "photoUrls": ["http://foo.bar.com/1", "http://foo.bar.com/2"],
+    "tags": [{
+        "id": 1437551301,
+        "name": "swagger-codegen-python-pet-tag"
+    }],
+    "status": "sold"
+}, {
+    "id": 1437551302,
+    "category": {
+        "id": 1437551302,
+        "name": "dog"
+    },
+    "name": "hello kity",
+    "photoUrls": ["http://foo.bar.com/1", "http://foo.bar.com/2"],
+    "tags": [{
+        "id": 1437551302,
+        "name": "swagger-codegen-python-pet-tag"
+    }],
+    "status": "sold"
+}, {
+    "id": 1437551305,
+    "category": {
+        "id": 1437551305,
+        "name": "dog"
+    },
+    "name": "hello kity",
+    "photoUrls": ["http://foo.bar.com/1", "http://foo.bar.com/2"],
+    "tags": [{
+        "id": 1437551305,
+        "name": "swagger-codegen-python-pet-tag"
+    }],
+    "status": "sold"
+}, {
+    "id": 1437551308,
+    "category": {
+        "id": 1437551308,
+        "name": "dog"
+    },
+    "name": "hello kity with updated",
+    "photoUrls": ["http://foo.bar.com/1", "http://foo.bar.com/2"],
+    "tags": [{
+        "id": 1437551308,
+        "name": "swagger-codegen-python-pet-tag"
+    }],
+    "status": "sold"
+}, {
+    "id": 930970784,
+    "name": "samwu",
+    "photoUrls": [],
+    "tags": [],
+    "status": "sold"
+}, {
+    "id": 1437551752,
+    "category": {
+        "id": 1437551752,
+        "name": "dog"
+    },
+    "name": "hello kity",
+    "photoUrls": ["http://foo.bar.com/1", "http://foo.bar.com/2"],
+    "tags": [{
+        "id": 1437551752,
+        "name": "blank"
+    }],
+    "status": "sold"
+}, {
+    "id": 1437551756,
+    "category": {
+        "id": 1437551756,
+        "name": "dog"
+    },
+    "name": "hello kity with updated",
+    "photoUrls": ["http://foo.bar.com/1", "http://foo.bar.com/2"],
+    "tags": [{
+        "id": 1437551756,
+        "name": "swagger-codegen-python-pet-tag"
+    }],
+    "status": "sold"
+}, {
+    "id": 1437551762,
+    "category": {
+        "id": 1437551762,
+        "name": "dog"
+    },
+    "name": "hello kity",
+    "photoUrls": ["http://foo.bar.com/1", "http://foo.bar.com/2"],
+    "tags": [{
+        "id": 1437551762,
+        "name": "swagger-codegen-python-pet-tag"
+    }],
+    "status": "sold"
+}, {
+    "id": 1437551764,
+    "category": {
+        "id": 1437551764,
+        "name": "dog"
+    },
+    "name": "hello kity",
+    "photoUrls": ["http://foo.bar.com/1", "http://foo.bar.com/2"],
+    "tags": [{
+        "id": 1437551764,
+        "name": "swagger-codegen-python-pet-tag"
+    }],
+    "status": "sold"
+}, {
+    "id": 1437551769,
+    "category": {
+        "id": 1437551769,
+        "name": "dog"
+    },
+    "name": "hello kity",
+    "photoUrls": ["http://foo.bar.com/1", "http://foo.bar.com/2"],
+    "tags": [{
+        "id": 1437551769,
+        "name": "swagger-codegen-python-pet-tag"
+    }],
+    "status": "sold"
+}, {
+    "id": 1437551770,
+    "category": {
+        "id": 1437551770,
+        "name": "dog"
+    },
+    "name": "hello kity",
+    "photoUrls": ["http://foo.bar.com/1", "http://foo.bar.com/2"],
+    "tags": [{
+        "id": 1437551770,
+        "name": "swagger-codegen-python-pet-tag"
+    }],
+    "status": "sold"
+}, {
+    "id": 1534244665,
+    "category": {
+        "id": 0,
+        "name": "string"
+    },
+    "name": "hund",
+    "photoUrls": ["string"],
+    "tags": [{
+        "id": 0,
+        "name": "string"
+    }],
+    "status": "sold"
+}, {
+    "id": 1437668881211,
+    "category": {
+        "id": 0,
+        "name": "billy"
+    },
+    "name": "billy",
+    "photoUrls": ["string"],
+    "tags": [{
+        "id": 0,
+        "name": "string"
+    }],
+    "status": "sold"
+}, {
+    "id": 1437730046,
+    "category": {
+        "id": 1437730046,
+        "name": "dog"
+    },
+    "name": "hello kity",
+    "photoUrls": ["http://foo.bar.com/1", "http://foo.bar.com/2"],
+    "tags": [{
+        "id": 1437730046,
+        "name": "blank"
+    }],
+    "status": "sold"
+}, {
+    "id": 1437730053,
+    "category": {
+        "id": 1437730053,
+        "name": "dog"
+    },
+    "name": "hello kity with updated",
+    "photoUrls": ["http://foo.bar.com/1", "http://foo.bar.com/2"],
+    "tags": [{
+        "id": 1437730053,
+        "name": "swagger-codegen-python-pet-tag"
+    }],
+    "status": "sold"
+}, {
+    "id": 1437730060,
+    "category": {
+        "id": 1437730060,
+        "name": "dog"
+    },
+    "name": "hello kity",
+    "photoUrls": ["http://foo.bar.com/1", "http://foo.bar.com/2"],
+    "tags": [{
+        "id": 1437730060,
+        "name": "swagger-codegen-python-pet-tag"
+    }],
+    "status": "sold"
+}, {
+    "id": 1437730065,
+    "category": {
+        "id": 1437730065,
+        "name": "dog"
+    },
+    "name": "hello kity",
+    "photoUrls": ["http://foo.bar.com/1", "http://foo.bar.com/2"],
+    "tags": [{
+        "id": 1437730065,
+        "name": "swagger-codegen-python-pet-tag"
+    }],
+    "status": "sold"
+}, {
+    "id": 1437730067,
+    "category": {
+        "id": 1437730067,
+        "name": "dog"
+    },
+    "name": "hello kity",
+    "photoUrls": ["http://foo.bar.com/1", "http://foo.bar.com/2"],
+    "tags": [{
+        "id": 1437730067,
+        "name": "swagger-codegen-python-pet-tag"
+    }],
+    "status": "sold"
+}, {
+    "id": 1437730070,
+    "category": {
+        "id": 1437730070,
+        "name": "dog"
+    },
+    "name": "hello kity",
+    "photoUrls": ["http://foo.bar.com/1", "http://foo.bar.com/2"],
+    "tags": [{
+        "id": 1437730070,
+        "name": "swagger-codegen-python-pet-tag"
+    }],
+    "status": "sold"
+}]
+
+		</pre>
+
+		
+	</div>
+		
+	
+	
+
+	<h2><span onclick="expand_contract(event)" class="expandIcon" expanded="true" target="Scenario1_2_body">-</span><a name="Scenario1_2"></a>1.2 findPetsByStatusTwo calling API Method: findPetsByStatus</h2>
+	
+
+	
+
+	<div id="Scenario1_2_body">
+		Finds Pets by status Two
+
+		2015-07-24 20:55:23 GMT
+		<h3><span onclick="expand_contract(event)" class="expandIcon" expanded="false" target="Scenario1_2_1">+</span>1.2.1 Request for: findPetsByStatusTwo</h3>
+
+		<pre style="word-break:break-word; display:none;" onclick="document.location = '#Scenario1_2_1'" id="Scenario1_2_1">
+
+{
+    "method": "GET",
+    "uri": "http://petstore.swagger.io/v2/pet/findByStatus",
+    "qs": {
+        "status": "pending"
+    },
+    "headers": {
+        "Authorization": "Bearer undefined"
+    }
+}
+
+		</pre>
+
+		<h3><span onclick="expand_contract(event)" class="expandIcon" expanded="false" target="Scenario1_2_2">+</span>1.2.2 Response for: findPetsByStatusTwo</h3>
+
+		Response Code: <b>200</b>
+		<br/>
+		Pass / Fail: <b>
+			<span style="color: #00BB00;">PASS</span>
+			
+			
+		</b>
+
+		<pre style="word-break:break-word; display:none;" onclick="document.location = '#Scenario1_2_2'" id="Scenario1_2_2">
+
+[{
+    "id": 1437533252,
+    "category": {
+        "id": 1437533252,
+        "name": "dog"
+    },
+    "name": "hello kity with form updated",
+    "photoUrls": ["http://foo.bar.com/1", "http://foo.bar.com/2"],
+    "tags": [{
+        "id": 1437533252,
+        "name": "blank"
+    }],
+    "status": "pending"
+}, {
+    "id": 1437534234,
+    "category": {
+        "id": 1437534234,
+        "name": "dog"
+    },
+    "name": "hello kity with form updated",
+    "photoUrls": ["http://foo.bar.com/1", "http://foo.bar.com/2"],
+    "tags": [{
+        "id": 1437534234,
+        "name": "blank"
+    }],
+    "status": "pending"
+}, {
+    "id": 1437548905,
+    "category": {
+        "id": 1437548905,
+        "name": "dog"
+    },
+    "name": "hello kity with form updated",
+    "photoUrls": ["http://foo.bar.com/1", "http://foo.bar.com/2"],
+    "tags": [{
+        "id": 1437548905,
+        "name": "blank"
+    }],
+    "status": "pending"
+}, {
+    "id": 1437549969,
+    "category": {
+        "id": 1437549969,
+        "name": "dog"
+    },
+    "name": "hello kity with form updated",
+    "photoUrls": ["http://foo.bar.com/1", "http://foo.bar.com/2"],
+    "tags": [{
+        "id": 1437549969,
+        "name": "blank"
+    }],
+    "status": "pending"
+}, {
+    "id": 1437551316,
+    "category": {
+        "id": 1437551316,
+        "name": "dog"
+    },
+    "name": "hello kity with form updated",
+    "photoUrls": ["http://foo.bar.com/1", "http://foo.bar.com/2"],
+    "tags": [{
+        "id": 1437551316,
+        "name": "swagger-codegen-python-pet-tag"
+    }],
+    "status": "pending"
+}, {
+    "id": 1437551767,
+    "category": {
+        "id": 1437551767,
+        "name": "dog"
+    },
+    "name": "hello kity with form updated",
+    "photoUrls": ["http://foo.bar.com/1", "http://foo.bar.com/2"],
+    "tags": [{
+        "id": 1437551767,
+        "name": "swagger-codegen-python-pet-tag"
+    }],
+    "status": "pending"
+}, {
+    "id": 1437730055,
+    "category": {
+        "id": 1437730055,
+        "name": "dog"
+    },
+    "name": "hello kity with form updated",
+    "photoUrls": ["http://foo.bar.com/1", "http://foo.bar.com/2"],
+    "tags": [{
+        "id": 1437730055,
+        "name": "swagger-codegen-python-pet-tag"
+    }],
+    "status": "pending"
+}]
+
+		</pre>
+
+		
+	</div>
+		</div>
+
+<h1><span onclick="expand_contract(event)" class="expandIcon" expanded="true" target="Scenario2_body">-</span><a name="Scenario2"></a><a href="#BackToDetails2" class="backLink" title="Back to Summary for Scenario #2">Scenario #2</a> - Test Script for the API: myAPI </h1>
+
+
+<div id="Scenario2_body">
+
+	
+	
+	
+
+	<h2><span onclick="expand_contract(event)" class="expandIcon" expanded="true" target="Scenario2_1_body">-</span><a name="Scenario2_1"></a>2.1 getPetByIdOne calling API Method: getPetById</h2>
+	
+
+	
+
+	<div id="Scenario2_1_body">
+		Find pet by ID
+
+		2015-07-24 20:55:24 GMT
+		<h3><span onclick="expand_contract(event)" class="expandIcon" expanded="false" target="Scenario2_1_1">+</span>2.1.1 Request for: getPetByIdOne</h3>
+
+		<pre style="word-break:break-word; display:none;" onclick="document.location = '#Scenario2_1_1'" id="Scenario2_1_1">
+
+{
+    "method": "GET",
+    "uri": "http://petstore.swagger.io/v2/pet/1437533240",
+    "qs": {},
+    "headers": {
+        "Authorization": "Bearer undefined"
+    }
+}
+
+		</pre>
+
+		<h3><span onclick="expand_contract(event)" class="expandIcon" expanded="false" target="Scenario2_1_2">+</span>2.1.2 Response for: getPetByIdOne</h3>
+
+		Response Code: <b>200</b>
+		<br/>
+		Pass / Fail: <b>
+			<span style="color: #00BB00;">PASS</span>
+			
+			
+		</b>
+
+		<pre style="word-break:break-word; display:none;" onclick="document.location = '#Scenario2_1_2'" id="Scenario2_1_2">
+
+{
+    "id": 1437533240,
+    "category": {
+        "id": 1437533240,
+        "name": "dog"
+    },
+    "name": "hello kity",
+    "photoUrls": ["http://foo.bar.com/1", "http://foo.bar.com/2"],
+    "tags": [{
+        "id": 1437533240,
+        "name": "blank"
+    }],
+    "status": "sold"
+}
+
+		</pre>
+
+		<h3><span onclick="expand_contract(event)" class="expandIcon" expanded="false" target="Scenario2_1_3">+</span>2.1.3 Test Results for: getPetByIdOne</h3>
+
+		<pre style="word-break:break-word; display:none;" onclick="document.location = '#Scenario2_1_3'" id="Scenario2_1_3">
+
+{
+    "pass": true,
+    "asserts": [{
+        "responseCode": "this.responseCode",
+        "assert": "(responseCode >= 200)",
+        "pass": true
+    }]
+}
+
+		</pre>
+		
+	</div>
+		
+	
+	
+
+	<h2><span onclick="expand_contract(event)" class="expandIcon" expanded="true" target="Scenario2_2_body">-</span><a name="Scenario2_2"></a>2.2 getPetByIdTwo calling API Method: getPetById</h2>
+	
+
+	
+
+	<div id="Scenario2_2_body">
+		Find pet by ID
+
+		2015-07-24 20:55:25 GMT
+		<h3><span onclick="expand_contract(event)" class="expandIcon" expanded="false" target="Scenario2_2_1">+</span>2.2.1 Request for: getPetByIdTwo</h3>
+
+		<pre style="word-break:break-word; display:none;" onclick="document.location = '#Scenario2_2_1'" id="Scenario2_2_1">
+
+{
+    "method": "GET",
+    "uri": "http://petstore.swagger.io/v2/pet/1437730055",
+    "qs": {},
+    "headers": {
+        "Authorization": "Bearer undefined"
+    }
+}
+
+		</pre>
+
+		<h3><span onclick="expand_contract(event)" class="expandIcon" expanded="false" target="Scenario2_2_2">+</span>2.2.2 Response for: getPetByIdTwo</h3>
+
+		Response Code: <b>200</b>
+		<br/>
+		Pass / Fail: <b>
+			<span style="color: #00BB00;">PASS</span>
+			
+			
+		</b>
+
+		<pre style="word-break:break-word; display:none;" onclick="document.location = '#Scenario2_2_2'" id="Scenario2_2_2">
+
+{
+    "id": 1437730055,
+    "category": {
+        "id": 1437730055,
+        "name": "dog"
+    },
+    "name": "hello kity with form updated",
+    "photoUrls": ["http://foo.bar.com/1", "http://foo.bar.com/2"],
+    "tags": [{
+        "id": 1437730055,
+        "name": "swagger-codegen-python-pet-tag"
+    }],
+    "status": "pending"
+}
+
+		</pre>
+
+		
+	</div>
+		
+	
+	
+
+	<h2><span onclick="expand_contract(event)" class="expandIcon" expanded="true" target="Scenario2_3_body">-</span><a name="Scenario2_3"></a>2.3 lastStep calling API Method: generalUtils.pause</h2>
+	
+
+	
+
+	<div id="Scenario2_3_body">
+		This will execute ONLY if ALL prior steps succeeded...
+
+		2015-07-24 20:55:26 GMT
+		<h3><span onclick="expand_contract(event)" class="expandIcon" expanded="false" target="Scenario2_3_1">+</span>2.3.1 Request for: lastStep</h3>
+
+		<pre style="word-break:break-word; display:none;" onclick="document.location = '#Scenario2_3_1'" id="Scenario2_3_1">
+
+{
+    "interval": 0.25
+}
+
+		</pre>
+
+		<h3><span onclick="expand_contract(event)" class="expandIcon" expanded="false" target="Scenario2_3_2">+</span>2.3.2 Response for: lastStep</h3>
+
+		Response Code: <b>200</b>
+		<br/>
+		Pass / Fail: <b>
+			<span style="color: #00BB00;">PASS</span>
+			
+			
+		</b>
+
+		<pre style="word-break:break-word; display:none;" onclick="document.location = '#Scenario2_3_2'" id="Scenario2_3_2">
+
+{
+    "message": "Resuming Script after pausing: 0.25 seconds"
+}
+
+		</pre>
+
+		
+	</div>
+		
+	
+	
+
+	<h2><span onclick="expand_contract(event)" class="expandIcon" expanded="true" target="Scenario2_4_body">-</span><a name="Scenario2_4"></a>2.4 ScriptSuccess calling API Method: generalUtils.pause</h2>
+	
+
+	
+
+	<div id="Scenario2_4_body">
+		This Script PASSED
+
+		2015-07-24 20:55:32 GMT
+		<h3><span onclick="expand_contract(event)" class="expandIcon" expanded="false" target="Scenario2_4_1">+</span>2.4.1 Request for: ScriptSuccess</h3>
+
+		<pre style="word-break:break-word; display:none;" onclick="document.location = '#Scenario2_4_1'" id="Scenario2_4_1">
+
+{
+    "interval": 0.25
+}
+
+		</pre>
+
+		<h3><span onclick="expand_contract(event)" class="expandIcon" expanded="false" target="Scenario2_4_2">+</span>2.4.2 Response for: ScriptSuccess</h3>
+
+		Response Code: <b>200</b>
+		<br/>
+		Pass / Fail: <b>
+			<span style="color: #00BB00;">PASS</span>
+			
+			
+		</b>
+
+		<pre style="word-break:break-word; display:none;" onclick="document.location = '#Scenario2_4_2'" id="Scenario2_4_2">
+
+{
+    "message": "Resuming Script after pausing: 0.25 seconds"
+}
+
+		</pre>
+
+		
+	</div>
+		</div>
